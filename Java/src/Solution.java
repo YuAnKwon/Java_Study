@@ -1,12 +1,14 @@
-import java.util.Arrays;
-import java.util.Collections;
-
 class Solution {
-    public long solution(long n) {
-    	char[] charArr = String.valueOf(n).toCharArray();
-    	Arrays.sort(charArr); // 오름차순
-    	StringBuilder sb = new StringBuilder(charArr.toString()).reverse();
+	public static void main(String[] args) {
+		System.out.println(solution("abcd"));
+	}
 
-        return Long.parseLong(sb.toString());
-    }
+	public static String solution(String s) {
+		int len = s.length();
+		if(len % 2 != 0) {
+			return s.substring(len/2, len /2+1);
+		} else {
+			return s.substring(len/2-1, len/2+1);
+		}
+	}
 }
