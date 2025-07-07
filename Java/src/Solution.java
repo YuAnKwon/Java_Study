@@ -1,14 +1,25 @@
+import java.util.Arrays;
+import java.util.Collections;
+
 class Solution {
 	public static void main(String[] args) {
-		System.out.println(solution("abcd"));
+		System.out.println(solution("Zbcdefg"));
 	}
 
-	public static String solution(String s) {
-		int len = s.length();
-		if(len % 2 != 0) {
-			return s.substring(len/2, len /2+1);
-		} else {
-			return s.substring(len/2-1, len/2+1);
-		}
-	}
+    public static String solution(String s) {
+    	char[] charArr = String.valueOf(s).toCharArray();
+
+    	Character[] characters = new Character[charArr.length];
+        for (int i = 0; i < charArr.length; i++) {
+            characters[i] = charArr[i];
+        }
+        
+    	Arrays.sort(characters, Collections.reverseOrder()); // 내림차순
+    	
+    	
+
+    	
+        String answer = "";
+        return answer;
+    }
 }
