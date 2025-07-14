@@ -1,5 +1,7 @@
 package Object;
 
+import java.io.Serializable;
+
 import lombok.*;
 
 @Getter
@@ -9,7 +11,7 @@ import lombok.*;
 @ToString
 @Builder
 @EqualsAndHashCode
-public class Person2 {
+public class Person2 implements Serializable{
 	private String name;
 	private String phoneNumber;
 }
